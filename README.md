@@ -1,0 +1,4 @@
+wp-template
+===========
+
+Wordpress Template
