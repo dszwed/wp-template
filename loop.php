@@ -10,13 +10,12 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<article class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __('Pages', '[theme_name]'), 'after' => '</div>' ) ); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                	<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __('Pages', '[theme_name]'), 'after' => '</div>' ) ); ?>
 						
-					</article><!-- .entry-content -->
-				</div><!-- #post-## -->
+				</article>				
 
 				<?php comments_template( '', true ); ?>
 
